@@ -32,10 +32,12 @@ tags:
 - United Kingdom
 - SME
 created: '2026-07-23'
-modified: '2026-07-23'
+modified: '2026-07-24'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/anna-money-domain-security.yml
 - type: Website
   url: https://www.anna.money/
 - type: Blog
@@ -50,6 +52,13 @@ common:
   url: https://github.com/anna-money
 - type: LinkedIn
   url: https://www.linkedin.com/company/annamoneyuk
+- type: Support
+  url: https://anna.money/help/
+- type: SignUp
+  url: https://anna.money/sign-up/
+- type: LLMsTxt
+  name: ANNA Money llms.txt (provider-published)
+  url: llms/anna-money-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
