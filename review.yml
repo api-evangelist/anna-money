@@ -1,0 +1,91 @@
+aid: anna-money
+name: ANNA Money
+review:
+  question: Does ANNA Money publish its own public API surface (a developer portal, OBIE Open Data API, or OBIE Read/Write APIs)?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    ANNA Money is a UK e-money business-account and tax app (a trading name of
+    Absolutely No Nonsense Admin Ltd, company number 10149389, a subsidiary of
+    ANNA Holdings Ltd), marketed as a challenger to the high-street banks. It is
+    NOT a bank and NOT an account-holding ASPSP: its Mastercard and e-money
+    services are issued by PayrNet Limited (FCA FRN 900594) and its Account
+    Information Services run under agency of TrueLayer (FCA FRN 901096). Within
+    UK Open Banking, ANNA is a consumer / third-party provider (TPP), not one of
+    the nine CMA9 mandated banks.
+
+    No first-party public API surface was found. There is no developer or Open
+    Banking portal (developer.anna.money did not resolve; /developers, /api, and
+    api.anna.money all returned 404). No live OBIE Open Data endpoint exists
+    (the standard /open-banking/v2.3/atms path returned 404). Because ANNA is
+    not an ASPSP, the OBIE Open Data and Read/Write (AIS/PIS/CBPII) standards do
+    not apply to it as a publisher, so representing those APIs against ANNA would
+    be fabrication and none were listed. ANNA instead consumes Open Banking via
+    TrueLayer's Data and Payments APIs (external-account aggregation, automatic
+    VAT calculation, QR-code pay-by-bank collection). ANNA's public GitHub
+    organisation (github.com/anna-money, ~24 public repos) hosts open-source
+    engineering libraries (aiohttp/asyncio/Postgres tooling, a UK modulus-check
+    utility), not product APIs. This profile is therefore an identity + link
+    bootstrap with an intentionally empty apis[] collection.
+  aspspStatus: false
+  cma9: false
+  institutionType: Electronic Money Institution (EMI) / TPP consumer of Open Banking
+  developerPortal:
+    documented: false
+    note: No developer or Open Banking portal published by ANNA.
+  openDataEndpoint:
+    confirmed: false
+    baseURL: ''
+    note: No OBIE Open Data host published; /open-banking/v2.3/atms returned 404. The /.well-known/open-banking path returns the site's SPA HTML shell (content-type text/html), not an Open Banking well-known resource.
+  readWriteApis:
+    documented: false
+    specProvenance: none
+    note: ANNA is not an ASPSP, so no OBIE Read/Write (AIS/PIS/CBPII) contract is published by or applicable to ANNA as a provider. No FAPI OAuth2/OIDC, mTLS, or PSD2 SCA surface of ANNA's own.
+  openapiHarvested: false
+  authModel: Not applicable - ANNA publishes no authenticated API of its own. Its Open Banking access is brokered through TrueLayer (agent) and e-money through PayrNet.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public ANNA-hosted REST API is documented.
+  probes:
+    - url: https://developer.anna.money/
+      status: 000
+      note: Did not resolve.
+    - url: https://anna.money/developers
+      status: 404
+    - url: https://anna.money/api
+      status: 404
+    - url: https://api.anna.money/
+      status: 404
+    - url: https://anna.money/open-banking/v2.3/atms
+      status: 404
+      note: Standard OBIE Open Data ATMs path - not present.
+    - url: https://anna.money/.well-known/open-banking
+      status: 200
+      note: Returns the site SPA HTML shell (text/html), not a real Open Banking well-known JSON resource.
+    - url: https://www.anna.money/
+      status: 200
+    - url: https://github.com/anna-money
+      status: 200
+      note: Real ANNA engineering GitHub org - open-source tooling, not product APIs.
+    - url: https://www.linkedin.com/company/annamoneyuk
+      status: 200
+sources:
+  - url: https://anna.money/
+    type: Website
+    note: Company homepage - "The business account that does your taxes"; states ANNA is not a bank.
+  - url: https://anna.money/blog/updates/what-is-open-banking-and-why-is-annas-approach-to-it-so-good/
+    type: Blog
+    note: ANNA's own explainer of its Open Banking (consumer/aggregation) approach.
+  - url: https://truelayer.com/customers/anna/
+    type: Reference
+    note: TrueLayer case study - ANNA uses TrueLayer Data + Payments APIs (ANNA is the TPP/consumer).
+  - url: https://www.openbankingtracker.com/provider/anna-money
+    type: Reference
+    note: Open Banking Tracker lists no API products for ANNA Money; classifies it as a challenger and TPP consumer of Open Banking.
+  - url: https://github.com/anna-money
+    type: GitHubOrganization
+    note: ANNA engineering org - open-source libraries only.

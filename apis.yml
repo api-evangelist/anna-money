@@ -1,0 +1,55 @@
+aid: anna-money
+url: https://raw.githubusercontent.com/api-evangelist/anna-money/refs/heads/main/apis.yml
+name: ANNA Money
+kind: company
+description: >-
+  ANNA Money (a trading name of Absolutely No Nonsense Admin Ltd, company number
+  10149389, Cardiff, a subsidiary of ANNA Holdings Ltd) is a UK digital business
+  account and tax app for freelancers, startups, and small businesses, positioned
+  as a challenger to the high-street banks. ANNA is not a bank but an e-money
+  proposition: its Mastercard and e-money services are issued by PayrNet Limited,
+  authorised by the Financial Conduct Authority for electronic money service
+  activities (FCA FRN 900594), and its Account Information Services are provided
+  under agency of TrueLayer (FCA FRN 901096). Within UK Open Banking, ANNA is a
+  consumer / third-party provider (TPP) rather than an account-holding ASPSP or
+  a CMA9 mandated bank - it uses TrueLayer's Data and Payments APIs for external
+  account aggregation, automatic VAT calculation, and QR-code "pay by bank"
+  collection. ANNA publishes no public developer portal, no Open Data API, and no
+  OBIE Read/Write (AIS/PIS/CBPII) API surface of its own; its public GitHub
+  organisation hosts open-source engineering tooling (asyncio, aiohttp, and
+  Postgres libraries) rather than product APIs.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Fintech
+- Business Account
+- Open Banking
+- PSD2
+- Account Information
+- Payments
+- E-Money
+- United Kingdom
+- SME
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.anna.money/
+- type: Blog
+  url: https://anna.money/blog/
+- type: Pricing
+  url: https://anna.money/pricing/
+- type: TermsOfService
+  url: https://anna.money/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://anna.money/privacy-policy/
+- type: GitHubOrganization
+  url: https://github.com/anna-money
+- type: LinkedIn
+  url: https://www.linkedin.com/company/annamoneyuk
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
