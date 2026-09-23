@@ -1,0 +1,27 @@
+# Front Door AI Index — anna-money — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: anna-money
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.anna.money
+  final_host: anna.money
+  ownership: own
+  owner: anna-money
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 5
+  host_score: 5
+  density: 1.71
+  words: 2923
+  tiers:
+    agentic: 3
+    core: 0
+    model: 2
+  ambiguous: 1
+  top_terms:
+    prompts: 3
+    ChatGPT: 2
+    agent: 1
