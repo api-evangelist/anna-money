@@ -1,4 +1,4 @@
-# ANNA Money (anna-money)
+# ANNA Money
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,56 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ANNA Money is a UK digital business account and tax app for freelancers, startups, and small businesses, marketed as "the business account that does your taxes." It is a trading name of Absolutely No Nonsense Admin Ltd (company number 10149389, Cardiff), a subsidiary of ANNA Holdings Ltd, and is positioned as a challenger to the UK high-street banks.
+ANNA Money (a trading name of Absolutely No Nonsense Admin Ltd, company number 10149389, Cardiff, a subsidiary of ANNA Holdings Ltd) is a UK digital business account and tax app for freelancers, startups, and small businesses, positioned as a challenger to the high-street banks. ANNA is not a bank but an e-money proposition: its Mastercard and e-money services are issued by PayrNet Limited, authorised by the Financial Conduct Authority for electronic money service activities (FCA FRN 900594), and its Account Information Services are provided under agency of TrueLayer (FCA FRN 901096). Within UK Open Banking, ANNA is a consumer / third-party provider (TPP) rather than an account-holding ASPSP or a CMA9 mandated bank - it uses TrueLayer's Data and Payments APIs for external account aggregation, automatic VAT calculation, and QR-code "pay by bank" collection. ANNA publishes no public developer portal, no Open Data API, and no OBIE Read/Write (AIS/PIS/CBPII) API surface of its own; its public GitHub organisation hosts open-source engineering tooling (asyncio, aiohttp, and Postgres libraries) rather than product APIs.
 
-ANNA is **not a bank**. It is an e-money proposition: its Mastercard and e-money services are issued by PayrNet Limited, authorised by the Financial Conduct Authority for electronic money service activities (FCA FRN 900594), and its Account Information Services are provided under agency of TrueLayer (FCA FRN 901096).
+**Areas:** Financial Services · Banking · Fintech · Business Account · Open Banking · PSD2 · Account Information · Payments · E-Money · United Kingdom · Small Business
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/anna-money/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/anna-money/refs/heads/main/apis.yml)
+## ANNA Money on APIs.io
 
-## Open Banking Posture
+Everything profiled for ANNA Money is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/anna-money/](https://apis.io/providers/anna-money/)** — or go straight to one of the APIs or properties below.
 
-Within UK Open Banking (OBIE / PSD2), ANNA is a **consumer / third-party provider (TPP)**, not an account-holding **ASPSP** and not one of the nine CMA9 mandated banks. ANNA does **not** publish:
+### Published properties
 
-- a public developer / Open Banking portal (no `developer.anna.money`, `/developers`, `/api`, or `api.anna.money`);
-- an OBIE **Open Data** API (ATMs / Branches / Product reference data) — no live Open Data endpoint was found;
-- OBIE **Read/Write** APIs (Account & Transaction Information / Payment Initiation / Confirmation of Funds) of its own.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Instead, ANNA *consumes* Open Banking through TrueLayer's Data and Payments APIs to power external-account aggregation, automatic VAT calculation, and QR-code "pay by bank" collection.
+#### Security (1)
 
-## Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Financial Services
-- Banking
-- Fintech
-- Business Account
-- Open Banking
-- PSD2
-- Account Information
-- Payments
-- E-Money
-- United Kingdom
-- SME
+- [Anna Money Domain Security](https://apis.io/security/anna-money/anna-money-domain-security/)
 
-## Timestamps
+## Where to find this API
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
-
-## APIs
-
-No first-party public APIs are documented. ANNA exposes no developer portal, Open Data API, or OBIE Read/Write API surface of its own, so the `apis` collection is intentionally empty. ANNA's product integrations (Stripe, Xero, Shopify, Amazon, etc.) and its Open Banking connectivity are delivered through third parties (notably TrueLayer) rather than an ANNA-published API.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.anna.money/)
-- [Blog](https://anna.money/blog/)
 - [Pricing](https://anna.money/pricing/)
-- [Terms of Service](https://anna.money/terms-and-conditions/)
-- [Privacy Policy](https://anna.money/privacy-policy/)
-- [GitHub Organization](https://github.com/anna-money)
-- [LinkedIn](https://www.linkedin.com/company/annamoneyuk)
+- [Sign up](https://anna.money/sign-up/)
+- [Support](https://anna.money/help/)
+- [Blog](https://anna.money/blog/)
+- [Terms of service](https://anna.money/terms-and-conditions/)
+- [Privacy policy](https://anna.money/privacy-policy/)
+- [GitHub](https://github.com/anna-money)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 14.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 44.7 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.0** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/anna-money/](https://apis.io/providers/anna-money/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ANNA Money: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/anna-money/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
